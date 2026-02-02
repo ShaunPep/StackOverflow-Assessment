@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="24506" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="24504"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Custom Alert View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController id="Y6W-OH-hqX" customClass="CustomAlertViewController" customModule="StackOverflow" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view clipsSubviews="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="T0J-NO-QCu">
+                                <rect key="frame" x="56.666666666666657" y="360" width="280" height="132.33333333333337"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="12" translatesAutoresizingMaskIntoConstraints="NO" id="vba-oi-Vvc">
+                                        <rect key="frame" x="16" y="16" width="248" height="54"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="R3U-BU-DU1">
+                                                <rect key="frame" x="0.0" y="0.0" width="248" height="21.666666666666668"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="18"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hhg-Vk-0Cw">
+                                                <rect key="frame" x="0.0" y="33.666666666666686" width="248" height="20.333333333333329"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="R3U-BU-DU1" firstAttribute="leading" secondItem="vba-oi-Vvc" secondAttribute="leading" id="85x-9R-J5u"/>
+                                            <constraint firstAttribute="trailing" secondItem="R3U-BU-DU1" secondAttribute="trailing" id="Av7-4o-eQK"/>
+                                            <constraint firstAttribute="trailing" secondItem="hhg-Vk-0Cw" secondAttribute="trailing" id="EIx-30-FwJ"/>
+                                            <constraint firstItem="hhg-Vk-0Cw" firstAttribute="leading" secondItem="vba-oi-Vvc" secondAttribute="leading" id="QWB-U7-Kp9"/>
+                                        </constraints>
+                                    </stackView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVN-BO-6Eh">
+                                        <rect key="frame" x="117.00000000000001" y="82" width="45.666666666666671" height="34.333333333333343"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" title="Ok"/>
+                                        <connections>
+                                            <action selector="buttonTapped" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DbK-g6-VQR"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="oVN-BO-6Eh" firstAttribute="centerX" secondItem="T0J-NO-QCu" secondAttribute="centerX" id="03M-PC-YUH"/>
+                                    <constraint firstAttribute="width" constant="280" id="2AH-qs-51r"/>
+                                    <constraint firstAttribute="bottom" secondItem="oVN-BO-6Eh" secondAttribute="bottom" constant="16" id="2Fj-ml-ZH8"/>
+                                    <constraint firstItem="oVN-BO-6Eh" firstAttribute="top" secondItem="vba-oi-Vvc" secondAttribute="bottom" constant="12" id="UPb-Wc-nsP"/>
+                                    <constraint firstAttribute="trailing" secondItem="vba-oi-Vvc" secondAttribute="trailing" constant="16" id="WMj-rh-TuA"/>
+                                    <constraint firstItem="vba-oi-Vvc" firstAttribute="leading" secondItem="T0J-NO-QCu" secondAttribute="leading" constant="16" id="eRQ-mr-e0f"/>
+                                    <constraint firstItem="vba-oi-Vvc" firstAttribute="top" secondItem="T0J-NO-QCu" secondAttribute="top" constant="16" id="x0Y-5G-We2"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="15"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="T0J-NO-QCu" firstAttribute="centerY" secondItem="5EZ-qb-Rvc" secondAttribute="centerY" id="5Mv-2D-nTU"/>
+                            <constraint firstItem="T0J-NO-QCu" firstAttribute="centerX" secondItem="5EZ-qb-Rvc" secondAttribute="centerX" id="wMW-vc-x0f"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="messageLabel" destination="hhg-Vk-0Cw" id="SyR-4g-aNf"/>
+                        <outlet property="titleLabel" destination="R3U-BU-DU1" id="age-IB-Y8j"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="138.1679389312977" y="130.98591549295776"/>
+        </scene>
+    </scenes>
+</document>
