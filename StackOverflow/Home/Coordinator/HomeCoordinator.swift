@@ -10,12 +10,9 @@ import UIKit
 
 class HomeCoordinator {
     private let navigationController: UINavigationController
-//    private let apiClient: ApiClient
     
-    //Add service here with default init
     init(navigationController: UINavigationController, apiClient: ApiClient = ApiClient()) {
         self.navigationController = navigationController
-//        self.apiClient = apiClient
     }
     
     func start() {
@@ -25,8 +22,6 @@ class HomeCoordinator {
             fatalError("HomeViewController not found")
         }
         
-//        let viewModel = HomeViewModel(with: apiClient)
-//        let viewModel = HomeViewModel(with: SearchResultsRepository())
         let viewModel = StackOverflowItemsViewModel(repository: SearchResultsRepository())
         
         viewController.viewModel = viewModel
@@ -41,8 +36,7 @@ class HomeCoordinator {
         guard let viewController = storyboard.instantiateViewController(withIdentifier: "StackOverflowItemDetailsViewController") as? StackOverflowItemDetailsViewController else {
             fatalError("Not found")
         }
-        //This must become some view model with the data
-//        viewController.viewModel = StackOverflowDetailsViewModel(with: item, repository: AnswersRepository())
+
         viewController.viewModel = StackOverflowItemsViewModel(repository: AnswersRepository())
         viewController.question = item
         

@@ -8,10 +8,6 @@
 import UIKit
 import WebKit
 
-//protocol SelectedItemTableViewCellDelegate: AnyObject {
-//    func onHeightUpdated(height: CGFloat, index: Int)
-//}
-
 class SelectedItemTableViewCell: UITableViewCell {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var webview: WKWebView!

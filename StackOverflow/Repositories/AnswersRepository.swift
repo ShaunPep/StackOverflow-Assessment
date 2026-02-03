@@ -14,9 +14,7 @@ protocol AnswersDataSource: AnyObject {
 class AnswersRepository: StackOverflowItemsRepositoryProtocol {
     private let apiClient = ApiClient()
     
-//    weak var datasource: AnswersDataSource!
     weak var datasource: SearchResultsDataSource!
-//    var answers: [StackOverflowAnswer]?
     var results: [StackOverflowAnswer]?
     
     func fetchItems(_ query: String) async throws {
@@ -25,9 +23,7 @@ class AnswersRepository: StackOverflowItemsRepositoryProtocol {
         do {
             let responseData: StackOverflowItems<StackOverflowAnswer> = try await apiClient.request(with: endpoint)
             
-//            answers = responseData.items
             results = responseData.items
-//            datasource.answersRecieved()
             datasource.searchResultsRecieved()
         } catch {
             
@@ -45,17 +41,4 @@ class AnswersRepository: StackOverflowItemsRepositoryProtocol {
     func getItem(at index: Int) -> StackOverflowAnswer {
         return results![index - 1]
     }
-    
-//    func fetchAnswers(for questionId: Int) async {
-//        let endpoint = StackOverflowEndpoint.getDetails(String(questionId))
-//        
-//        do {
-//            let responseData: StackOverflowItems<StackOverflowAnswer> = try await apiClient.request(with: endpoint)
-//            
-//            answers = responseData.items
-//            datasource.answersRecieved()
-//        } catch {
-//            
-//        }
-//    }
 }
